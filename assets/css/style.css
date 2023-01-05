@@ -31,6 +31,24 @@ h5,
 h6 {
   font-family: "Raleway", sans-serif;
 }
+strong {
+  position: relative;
+}
+
+strong::before {
+  /* Highlight color */
+  background-color: #46b96c;
+
+  content: "";
+  position: absolute;
+  width: calc(100% );
+  height: 10%;
+  left: 0px;
+  bottom: 0;
+  z-index: -1;
+  transform: rotate(-3deg);
+  border-radius: 20% 50% 25% 20%;
+}
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -385,7 +403,7 @@ h6 {
 
 #hero h1 {
   margin: 0;
-  font-size: 70px;
+  font-size: 78px;
   font-weight: 400;
   color: #fff;
 }
@@ -418,12 +436,12 @@ h6 {
 
 @media (max-width: 768px) {
   #hero {
-    text-align: center;
-    padding-top: 58px;
+    padding-top: 60px;
   }
 
   #hero h1 {
-    font-size: 28px;
+    text-align:left;
+    font-size: 48px;
   }
 
   #hero h2 {
@@ -436,6 +454,7 @@ h6 {
   #hero {
     height: 120vh;
   }
+  
 }
 
 /*--------------------------------------------------------------
